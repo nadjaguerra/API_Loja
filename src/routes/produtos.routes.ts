@@ -12,10 +12,10 @@ class ProdutosRoutes {
 
   intializeRoutes() {
 
-    // Criar um novo genero.
+    
     this.router.post("/produto", this.controller.create);
 
-    // Retornar os generos já cadastrados.
+  
     this.router.get("/produtos", this.controller.findAll);
   }
 }
