@@ -1,11 +1,11 @@
 import { Application } from "express";
 import homeRoutes from "./home.routes";
-//import generoRoutes from "./genero.routes";
+import produtosRoutes from "./produtos.routes";
 
 export default class Routes {
   constructor(app: Application) {
-    app.use("/", homeRoutes);
-    //app.use("/seuZeFilmes", generoRoutes);
+    app.use("/produtos", homeRoutes);
+    app.use("/produtos", produtosRoutes);
 
   }
 }
