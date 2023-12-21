@@ -1,7 +1,6 @@
 import { Router } from "express";
 import ProdutosController from "../controllers/produtos.controller";
 
-
 class ProdutosRoutes {
   router = Router();
   controller = new ProdutosController();
@@ -11,13 +10,15 @@ class ProdutosRoutes {
   }
 
   intializeRoutes() {
+    this.router.get("/produtos", this.controller.findAll);
 
-    // Criar um novo genero.
+   // this.router.get("/produto/:id", this.controller.findOne);
+
     this.router.post("/produto", this.controller.create);
 
-    // Retornar os generos já cadastrados.
-    this.router.get("/produtos", this.controller.findAll);
+   // this.router.put("/produto/:id", this.controller.update);
+
+   //this.router.delete("/produto/:id", this.controller.delete);
   }
 }
-
 export default new ProdutosRoutes().router;

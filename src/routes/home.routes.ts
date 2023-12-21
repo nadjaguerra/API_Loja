@@ -10,7 +10,6 @@ class HomeRoutes {
 
   intializeRoutes() {
     this.router.get("/", (req: Request, res: Response) => { return res.status(200).json("Bem Vindo!") });
-    this.router.get("/produtos", (req: Request, res: Response) => { return res.status(200).json("Não há produtos cadastrados") });
   }
 }
 

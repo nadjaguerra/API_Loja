@@ -1,30 +1,71 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export class Produtos {
   // Fields
-  id: number;
+  idProduto: string;
   nome: string;
-  published?: boolean;
+  descricao?: string;
+  preco: number;
+  categoria: string;
+  published: boolean;
 
   // Constructor
-  constructor(id: number, nome: string) {
-    this.id = id;
+  constructor(nome: string, descricao: string, preco: number, categoria: string, published: boolean) {
+    this.idProduto = uuidv4();
     this.nome = nome;
+    this.descricao = descricao;
+    this.preco = preco;
+    this.categoria = categoria;
+    this.published = published;
   }
 
   // Getters
-  getId(): number {
-    return this.id;
+  getIdProduto(): string {
+    return this.idProduto;
   }
 
   getNome(): string {
     return this.nome;
   }
 
+  getDescricao(): string | undefined {
+    return this.descricao;
+  }
+
+  getPreco(): number {
+    return this.preco;
+  }
+
+  getCategoria(): string {
+    return this.categoria;
+  }
+
+  getPublished(): boolean {
+    return this.published;
+  }
+
   // Setters
-  setId(id: number): void {
-    this.id = id;
+  setIdProduto(idProduto: string): void {
+    this.idProduto = idProduto;
   }
 
   setNome(nome: string): void {
     this.nome = nome;
+  }
+
+  setDescricao(descricao: string | undefined): void {
+    this.descricao = descricao;
+  }
+
+  setPreco(preco: number): void {
+    this.preco = preco;
+  }
+
+  setCategoria(categoria: string): void {
+    this.categoria = categoria;
+  }
+
+  setPublished(published: boolean): void {
+    this.published = published;
   }
 }
