@@ -7,7 +7,7 @@ export class Produtos {
   descricao?: string;
   preco: number;
   categoria: string;
-  published: boolean;
+  published?: boolean;
 
   // Constructor
   constructor(nome: string, descricao: string, preco: number, categoria: string, published: boolean) {
@@ -40,7 +40,7 @@ export class Produtos {
     return this.categoria;
   }
 
-  getPublished(): boolean {
+  getPublished(): boolean  | undefined {
     return this.published;
   }
 
