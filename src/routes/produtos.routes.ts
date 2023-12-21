@@ -14,11 +14,11 @@ class ProdutosRoutes {
 
    // this.router.get("/produto/:id", this.controller.findOne);
 
-    // Criar um novo genero.
     this.router.post("/produto", this.controller.create);
 
-    // Retornar os generos já cadastrados.
-    this.router.get("/produtos", this.controller.findAll);
+   // this.router.put("/produto/:id", this.controller.update);
+
+   //this.router.delete("/produto/:id", this.controller.delete);
   }
 }
 export default new ProdutosRoutes().router;
